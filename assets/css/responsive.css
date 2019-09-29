@@ -1,0 +1,182 @@
+@media (max-width: 575.98px) {
+    .hero-bg img {
+        height: 100%;
+        width: auto;
+    }
+    .address-menu {
+        display: none;
+    }
+    a.menu-link {
+        font-size: 30px;
+    }
+
+    .service-item {
+        width: 100% !important;
+    }
+
+    .about-text-bg {
+        display: none;
+    }
+
+    .left-bg {
+        display: none
+    }
+
+    .right-bg {
+        display: none;
+    }
+
+    .toggle-btn::before {
+        display: none;
+    }
+    .hero-title h1 {
+        font-size: 40px;
+    }
+    .links::before {
+        display: none;
+    }
+    .news-text p {
+        display: none;
+    }
+    .hero-title {
+        padding: 0 30px;
+    }
+
+    .title h2 {
+        font-size: 30px;
+    }
+    .line-between {
+        height: 50px;
+        margin-top: -25px;
+    }
+    .title {
+      text-align: center !important;
+    }
+    .about-text {
+        padding: 20px 0px;
+        z-index: 1;
+    }
+    .about-img {
+        margin-top: 30px !important;
+    }
+    .title:before, .mid-title .title:before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(45deg);
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        z-index: 1;
+        background: url(../img/text-bg-light.svg) repeat;
+        background-size: 10px;    
+    }
+    .service {
+        margin-bottom: 10px;
+    }
+
+    .mb-30 {
+        margin-bottom: 30px !important;
+    }
+    section {
+        padding: 50px 0;
+    }
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .address-menu {
+        display: none;
+    }
+    .links::before {
+        display: none;
+    }
+    .left-bg {
+        display: none
+    }
+
+    .right-bg {
+        display: none;
+    }
+    .toggle-btn::before {
+        display: none;
+    }
+    .hero-title h1 {
+        font-size: 40px;
+    }
+    .news-text p {
+        display: none;
+    }
+ 
+   
+    section {
+        padding: 70px 0;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .address-menu {
+        display: none;
+    }
+    .links::before {
+        display: none;
+    }
+
+    .left-bg {
+        display: none
+    }
+
+    .right-bg {
+        display: none;
+    }
+    section {
+        padding: 70px 0;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .left-bg {
+        display: none
+    }
+
+    .right-bg {
+        display: none;
+    }
+
+    a.menu-link {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 100px 0;
+    }
+
+}
+
+/* // Large devices (desktops, less than 1200px) RETINA */
+@media (min-width: 1200px) and (max-width: 4000px) {
+    .work-item {
+        height: 350px;
+    }
+
+    .mt-60-lg {
+        margin-top: 60px !important;
+    }
+
+    section {
+        padding: 100px 0;
+    }
+
+
+    a.menu-link {
+        font-size: 40px;
+    }
+
+    .detail-title {
+        margin-top: -300px;
+    }
+   
+}

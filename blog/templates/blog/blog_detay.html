@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block metatags %}
+  <title>Maxim Gorki | {{ icerik.title }}</title>
+  <meta name="description" content="{{ icerik.description }}">
+  <meta name="keywords" content="{{ icerik.keywords }}">
+  <meta name="author" content="{{ icerik.author }}">
+{% endblock %}
+
+
+    {% block content %}
+
+
+    <section class="hero centered" data-scroll-index="0">
+        <div class="hero-bg">
+            <div class="square-project-detail"></div>
+            <div class="square-overlay"></div>
+        </div>
+        <div class="email-link title-anim">
+            <a href="tel:{{ icerik.telefon }}">{{ icerik.telefon }}</a>
+        </div>
+        <div class="social title-anim">
+            <ul>
+                <li><a href="{{ icerik.instagram }}"><i class="fab fa-instagram" aria-hidden="true"></i> </a></li>
+                <li><a href="{{ icerik.facebook }}"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="{{ icerik.pinterest }}"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="project-main parallax-scrl">
+        <div class="project-detail">
+            <div class="detail-title centered">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mid-title">
+                            <div class="title text-center">
+                                <h3>{{ icerik.ustbaslik }}</h3>
+                                <h2>{{ icerik.altbaslik }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="detailes">
+                                <h3>{{ icerik.buyukyazi }}</h3>
+                                <p>{{ icerik.kucukyazi }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    {% endblock %}
+
+
+
