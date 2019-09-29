@@ -1,0 +1,597 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block metatags %}
+  <title>Maxim Gorki | Official Website</title>
+  <meta name="description" content="{{ icerik.description }}">
+  <meta name="keywords" content="{{ icerik.keywords }}">
+  <meta name="author" content="{{ icerik.author }}">
+{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+
+
+    <!-- Start Hero -->
+    <section class="hero centered" data-scroll-index="0">
+        <div class="hero-bg">
+            <div class="square"></div>
+            <div class="square-overlay"></div>
+        </div>
+        <div class="email-link title-anim">
+            <a href="#">info@maximgorki.com</a>
+        </div>
+        <div class="social title-anim">
+            <ul>
+                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i> </a></li>
+                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="container between">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                        <div class="hero-title text-left">
+                            <h3 class="title-anim">Maxim Gorki</h3>
+                            <h1 class="title-anim">Güzelleşerek İyileşin</h1>
+                            <div class="mt-20"></div>
+                            <p class="title-anim">Deneyimli kadromuz ile birçok farklı hizmetimizden faydalanarak kendinizdeki değişikliği hissedin ve enerjinizi yukarı çıkarın.</p>
+                            <div class="mt-40 title-anim">
+                                <a class="btn-main" href="#" data-scroll-nav="7">Bize Ulaşın</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start About -->
+    <section id="about" class="about parallax-scrl" data-scroll-index="1">
+        <div class="right-bg"></div>
+        <div class="container">
+            {% for icerik in hakkimizdaicerik %}
+            <div class="row">
+
+                <div class="col-lg-6 order-lg-2">
+
+                    <div class="about-text">
+                        <div class="title text-left">
+                            <h3>{{ icerik.ustbaslik }}</h3>
+                            <h2>{{ icerik.altbaslik }}</h2>
+                        </div>
+                        <div class="about-inner mt-30">
+                            <h4>{{ icerik.buyukyazi }}</h4>
+                            <p>{{ icerik.kucukyazi }}</p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 centered">
+                    <div class="about-img line-img">
+                        <div class="about-first"></div>
+                        <div class="about-overlay"></div>
+                        <img class="img-fluid" src="{{ icerik.resim.url }}" alt="">
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <div class="between">
+        <div class="line-between"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start Service ->
+    <section id="service" class="service parallax-scrl" data-scroll-index="2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="title text-left">
+                        <h3>Our areas of</h3>
+                        <h2>Services</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-30">
+                <div class="col-lg-4 mt-30">
+                    <div class="service-item bg-main">
+                        <div class="service-icon text-center">
+                            <img src="% static 'img/service/1.png' %}" alt="">
+                        </div>
+                        <div class="service-text">
+                            <h3>GRAPHIC DESIGN</h3>
+                            <p>Put your eyes on your customers while keeping a graphic and aesthetic coherence. </p>
+                            <div class="service-line"></div>
+                            <ul class="service-list">
+                                <li>Logo Design</li>
+                                <li>UI/UX</li>
+                                <li>Illustration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-50">
+                    <div class="service-item bg-second">
+                        <div class="service-icon text-center">
+                            <img src="% static 'img/service/2.png' %}" alt="">
+                        </div>
+                        <div class="service-text">
+                            <h3>DEVELOPMENT</h3>
+                            <p>Put your eyes on your customers while keeping a graphic and aesthetic coherence. </p>
+                            <div class="service-line"></div>
+                            <ul class="service-list">
+                                <li>Website</li>
+                                <li>Mobile App</li>
+                                <li>Desktop App</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-30">
+                    <div class="service-item bg-main">
+                        <div class="service-icon text-center">
+                            <img src="% static 'img/service/3.png' %}" alt="">
+                        </div>
+                        <div class="service-text">
+                            <h3>BRANDING</h3>
+                            <p>Put your eyes on your customers while keeping a graphic and aesthetic coherence. </p>
+                            <div class="service-line"></div>
+                            <ul class="service-list">
+                                <li>Logo Design</li>
+                                <li>UI/UX</li>
+                                <li>Illustration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Service ->
+
+
+
+
+
+
+
+
+
+
+
+    <div class="between">
+        <div class="line-between"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start Team -->
+    <section id="team" class="team parallax-scrl">
+        <div class="team-text-bg"></div>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3 order-lg-1 centered">
+                    <div class="title text-left">
+                        <h3>Güncel</h3>
+                        <h2>Portfolyo</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9 order-lg-2 mt-10">
+                    <div class="team-slider">
+                        <div class="owl-carousel owl-theme">
+
+                            {% for icerik in portfolyoicerik %}
+                            <div class="team-item text-center">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="{{ icerik.resim.url }}" alt="">
+                                </div>
+                                <div class="team-text">
+                                    <h3 style="background-color: rgba(256, 256, 256, 0.3);padding: 10px">{{ icerik.isim }}</h3>
+                                    <p style="background-color: rgba(256, 256, 256, 0.3);padding: 10px">{{ icerik.islem }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                    <div class="mt-40 text-center">
+                        <ul class="arrows">
+                            <li class="arrow-left -team"><img src="{% static 'img/arrow-light.png' %}" alt=""></li>
+                            <li class="arrow-right -team"><img src="{% static 'img/arrow-light-R.png' %}" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Team -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="between">
+        <div class="line-between"></div>
+    </div>
+
+
+
+
+
+
+
+
+    <section id="project" class="project-section parallax-scrl" data-scroll-index="3">
+        <div class="left-bg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title">
+                        <h3>Sunduğumuz</h3>
+                        <h2>Hizmetler</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-40">
+
+                {% for icerik in hizmetlerimizicerik %}
+                <div class="col-md-12 col-lg-6">
+                    <a href="/hizmetlerimiz/{{ icerik.link }}">
+                        <div class="project-content">
+                            <div class="img-project">
+                                <img src="{{ icerik.resim.url }}" alt="">
+                            </div>
+                            <div class="detail-project">
+                                <p><span class="number">{{ icerik.id }}</span> <span class="strip"></span> {{ icerik.ustbaslik }}</p>
+                                <h3 class="reveal-text"><a href="/hizmetlerimiz/{{ icerik.link }}"> {{ icerik.altbaslik }}</a></h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+
+                <div class="col-lg-12 text-center">
+                    <div class="mt-50 mb-30">
+                        <a class="btn-main" href="/hizmetlerimiz/">Tümünü İnceleyin</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Projects -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="between">
+        <div class="line-between"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start Team -->
+    <section id="team" class="team parallax-scrl" data-scroll-index="4">
+        <div class="team-text-bg"></div>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3 order-lg-2 centered">
+                    <div class="title text-left">
+                        <h3>Deneyimli</h3>
+                        <h2>Ekibimiz</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9 order-lg-1 mt-10">
+                    <div class="team-slider">
+                        <div class="owl-carousel owl-theme">
+
+                            {% for icerik in takimicerik %}
+                            <div class="team-item text-center">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="{{ icerik.resim.url }}" alt="">
+                                </div>
+                                <div class="team-text">
+                                    <h3 style="background-color: rgba(256, 256, 256, 0.3);padding: 10px">{{ icerik.isim }}</h3>
+                                    <p style="background-color: rgba(256, 256, 256, 0.3);padding: 10px">{{ icerik.pozisyon }}</p>
+                                    <p>
+                                        <a href="{{ icerik.instagram }}" target="_blank"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i> &nbsp </a>
+                                        <a href="{{ icerik.facebook }}" target="_blank"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i> &nbsp </a>
+                                        <a href="{{ icerik.pinterest }}" target="_blank"><i class="fab fa-pinterest fa-2x" aria-hidden="true"></i>  </a>
+                                    </p>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                    <div class="mt-40 text-center">
+                        <ul class="arrows">
+                            <li class="arrow-left -team"><img src="{% static 'img/arrow-light.png' %}" alt=""></li>
+                            <li class="arrow-right -team"><img src="{% static 'img/arrow-light-R.png' %}" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Team -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="between">
+        <div class="line-between"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start News -->
+    <section id="news" class="news parallax-scrl" data-scroll-index="5">
+        <div class="right-bg"></div>
+        <div class="about-text-bg"></div>
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-lg-12 mid-title">
+                    <div class="title text-center">
+                        <h3>Sektörden</h3>
+                        <h2>Haberler</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-50">
+                    <div class="news-slider">
+                        <div class="owl-carousel owl-theme">
+
+                            {% for icerik in blogicerik %}
+                            <div class="news-item text-center">
+                                <div class="news-img">
+                                    <img class="img-fluid" src="{{ icerik.resim.url }}" alt="">
+                                </div>
+                                <div class="news-text">
+                                    <h3>{{ icerik.ustbaslik }}</h3>
+                                    <p>{{ icerik.altbaslik }}</p>
+                                    <a class="news-link" href="/blog/{{ icerik.link }}">Detaylar</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                    <div class="mt-40 text-center">
+                        <ul class="arrows">
+                            <li class="arrow-left -news"><img src="{% static 'img/arrow-light.png' %}" alt=""></li>
+                            <li class="arrow-right -news"><img src="{% static 'img/arrow-light-R.png' %}" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End News -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="between">
+        <div class="line-between"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="client" data-scroll-index="6">
+        <div class="testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mid-title">
+                        <div class="title text-center">
+                            <h3>Müşterilerimizin</h3>
+                            <h2>Yorumları</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 offset-lg-1 mt-20">
+                        <div class="quot-left">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        </div>
+                        <div class="quot-right">
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="testimonial">
+                            <div class="owl-carousel owl-theme">
+
+                                {% for icerik in yorumlaricerik %}
+                                <div class="item-testi-slide">
+                                    <div class="testimonial-item text-center">
+                                        <p>{{ icerik.yorum }}</p>
+                                        <div class="author">
+                                            <p class="author-text">{{ icerik.isim }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line-testi"></div>
+            </div>
+        </div>
+
+        <!-- Start Client -->
+        <div class="client mid-title">
+            <div class="container">
+
+                <div class="partner">
+                    <div class="owl-carousel owl-theme">
+
+                        {% for icerik in markalaricerik %}
+                        <div class="item-partner">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img src="{{ icerik.resim.url }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Client -->
+    </section>
+    <!-- End Testimonial -->
+
+
+
+
+
+
+{% endblock %}

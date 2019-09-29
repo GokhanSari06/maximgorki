@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block metatags %}
+  <title>Maxim Gorki | Hizmetlerimiz</title>
+  <meta name="description" content="{{ icerik.description }}">
+  <meta name="keywords" content="{{ icerik.keywords }}">
+  <meta name="author" content="{{ icerik.author }}">
+{% endblock %}
+
+
+    {% block content %}
+
+
+    <section class="hero centered" data-scroll-index="0">
+        <div class="title-single-page centered mid-title">
+            <div class="title text-center">
+                <h3>Sizler için</h3>
+                <h2>Hizmetlerimiz</h2>
+            </div>
+        </div>
+        <div class="single-page-bg">
+            <div class="square-overlay"></div>
+        </div>
+        <div class="line-single-page"></div>
+    </section>
+
+
+
+
+
+
+    <section class="project-section parallax-scrl single-port" data-scroll-index="3">
+        <div class="container">
+            <div class="row mt-40">
+
+            {% for icerik in icerik %}
+                <div class="col-md-12 col-lg-6 mt-40">
+                    <a href="{{ icerik.link }}">
+                        <div class="project-content">
+                            <div class="img-project">
+                                <img src="{{ icerik.resim.url }}" alt="">
+                            </div>
+                            <div class="detail-project">
+                                <p><span class="number">{{ icerik.id }}</span> <span class="strip"></span> {{ icerik.ustbaslik }}</p>
+                                <h3 class="reveal-text"><a href="{{ icerik.link }}">{{ icerik.altbaslik }}</a></h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+
+            </div>
+        </div>
+    </section>
+    <!-- End Projects -->
+
+
+    {% endblock %}

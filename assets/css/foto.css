@@ -1,0 +1,69 @@
+$grid-gutter: 4px;
+$photo-height: 230px;
+
+.container{
+  &--gallery{
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .row {
+      margin-left: -$grid-gutter;
+      margin-right: -$grid-gutter;
+    }
+
+    [class*="col-"] {
+      padding-left: $grid-gutter;
+      padding-right: $grid-gutter;
+      margin-bottom: $grid-gutter * 2;
+    }
+  }
+}
+
+.photo-zoom {
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  height: $photo-height;
+
+  img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+
+    [class*="-1"]:not([class*="-10"]):not([class*="-11"]):not([class*="-12"]) &,
+    [class*="-2"] &,
+    [class*="-3"] & {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+// Plugin style
+
+.image-source-link {
+  color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.23s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
